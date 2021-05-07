@@ -2,28 +2,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 body {
-    background-color: #212121;
+    background-color: #232931;
 }
 
 h1 {
-    color: #F7F7F7;
+    color: #eeeeee;
     font-family: 'Roboto Mono', monospace;
 }
 
 p {
-    color: #b1b1b1;
+    color: #eeeeee;
     font-family: 'Roboto', sans-serif;
 }
 
 a {
-    color: #3667a8;
+    color: #4ecca3;
     font-family: 'Roboto Mono', monospace;
     text-decoration: none;
 }
 
 a:hover {
     transition: 200ms;
-    color: #6080a8;
+    color: #eeeeee;
     text-decoration-line: underline;
     text-decoration-style: solid;
     text-decoration-thickness: 2px;
