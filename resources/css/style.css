@@ -2,13 +2,16 @@
 /* GLOBAL VARIABLES */
 
 :root {
-    --color-background: #232931;
-    --color-accent: #4ecca3;
-    --color-text: #eeeeee;
+    --color-background: #edf2f4;
+    --color-accent: #ef233c;
+    --color-important: #d90429;
+    --color-title: #2b2d42;
+    --color-text: #8D99AE;
 
     --font-title: 'Roboto Slab', serif;
     --font-regular: 'Roboto Mono', monospace;
 
+    --header-container-height: 30vh;
     --header-height: 15vh;
 }
 
@@ -23,7 +26,42 @@ body {
     font-weight: 400;
 }
 
+p {
+    color: var(--color-text);
+    font-family: var(--font-regular);
+}
+
 /* ID SELECTORS */
+
+#logo {
+    width: calc(var(--header-height) / 2);
+    height: calc(var(--header-height) / 2);
+    position: absolute;
+    top: calc(var(--header-height) / 2);
+    left: calc(var(--header-height) / 2);
+    background: url("../img/logo.png") no-repeat top center;
+    background-size: calc(var(--header-height) / 2) auto;
+}
+
+#logo-text {
+    margin-left: 10vh;
+    color: var(--color-important);
+    font-family: var(--font-title);
+    font-weight: 400;
+    font-size: calc(var(--header-height) / 3);
+    vertical-align: middle;
+}
+
+#cover {
+    height: 70vh;
+    background-color: var(--color-important);
+    background: url("../img/cover.png") no-repeat top right, var(--color-accent);
+    background-size: 150vh auto;
+}
+
+#header-container {
+    height: var(--header-container-height);
+}
 
 #header {
     display: flex;
@@ -34,7 +72,7 @@ body {
 }
 
 #span-title {
-    color: var(--color-text);
+    color: var(--color-title);
     font-family: var(--font-title);
     font-weight: 400;
     font-size: calc(var(--header-height) / 3);
@@ -43,7 +81,7 @@ body {
 }
 
 #span-member {
-    color: var(--color-text);
+    color: var(--color-title);
     font-family: var(--font-title);
     font-weight: 400;
     font-size: calc(var(--header-height) / 4);
@@ -58,6 +96,17 @@ body {
 
 #header-link:hover {
     transition: 200ms;
-    color: var(--color-text);
-    text-decoration: underline;
+    color: var(--color-title);
+}
+
+#article {
+    display: flex;
+    justify-content: space-between;
+    padding-left: calc(var(--header-height) / 2);
+    padding-right: calc(var(--header-height) / 2);
+    width: 100vh;
+}
+
+#highlight {
+    color: var(--color-important);
 }
