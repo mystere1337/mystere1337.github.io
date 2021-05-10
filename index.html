@@ -1,8 +1,10 @@
 <!doctype html>
 
 <head>
-    <title>hyperwav.dev</title>
+    <title>hyperwav (Aymeric Baud)</title>
     <link rel="stylesheet" href="resources/css/style.css">
+    <script src="resources/js/script.js"></script>
+
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="resources/favicon/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="resources/favicon/apple-touch-icon-114x114.png" />
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="resources/favicon/apple-touch-icon-72x72.png" />
@@ -16,7 +18,7 @@
     <link rel="icon" type="image/png" href="resources/favicon/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="resources/favicon/favicon-16x16.png" sizes="16x16" />
     <link rel="icon" type="image/png" href="resources/favicon/favicon-128.png" sizes="128x128" />
-    <meta name="application-name" content="hyperwav.dev"/>
+    <meta name="application-name" content="hyperwav.dev" />
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="msapplication-TileImage" content="resources/favicon/mstile-144x144.png" />
     <meta name="msapplication-square70x70logo" content="resources/favicon/mstile-70x70.png" />
@@ -31,20 +33,47 @@
     </div>
     <div id="cover"></div>
 
-    <div id="header-container">
+    <div id="header-container" trigger="0">
         <div id="header">
             <span id="span-title">aymeric baud</span>
             <span id="span-member">
-                <a id="header-link" href="index.html">home</a> /
+                <a id="header-link" onclick="showHome()">home</a> /
                 <a id="header-link" href="index.html">projects</a> /
-                <a id="header-link" href="index.html">contact</a>
+                <a id="header-link" href="index.html">music</a> /
+                <a id="header-link" onclick="showContactForm()" href="#contact-container">contact</a>
             </span>
         </div>
 
         <div id="article">
             <span>
-                <p>Hi, it's aymeric! I'm a french computer science student based in Lyon, France. I'm currently studying IT at Epitech. I'm interested in reverse engineering, cyber-security, low-level programming and design. I make music as well.</p><br>
+                <p>Hi, it's aymeric! I'm a french computer science student based in Lyon, France. I'm currently studying
+                    IT at Epitech. I'm interested in reverse engineering, cyber-security, low-level programming and
+                    design. I make music as well.</p><br/>
             </span>
         </div>
+    </div>
+
+    <div id="contact-container">
+        <form id="contact-form" action="index.html" autocomplete="off">
+            <div class="contact-left">
+                <div class="input-container">
+                    <input type="text" name="name" class="input" />
+                    <label for="">Name</label>
+                </div>
+                <div class="input-container">
+                    <input type="email" name="email" class="input" />
+                    <label for="">Email</label>
+                </div>
+            </div>
+            <div class="contact-center">
+                <div class="input-container textarea">
+                    <textarea name="message" class="input"></textarea>
+                    <label for="">Message</label>
+                </div>
+            </div>
+            <div class="contact-right">
+                <input type="submit" value="Send" class="btn" />
+            </div>
+        </form>
     </div>
 </body>
