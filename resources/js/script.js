@@ -1,4 +1,25 @@
 var home = 1;
+var theme = 0; // 0 = light | 1 = dark
+
+function switchTheme() {
+    var root = document.documentElement;;
+
+    if (theme === 0) {
+        root.style.setProperty('--color-background', "#2b2d42");
+        root.style.setProperty('--color-accent', "#ef233c");
+        root.style.setProperty('--color-important', "#d90429");
+        root.style.setProperty('--color-title', "#edf2f4");
+        root.style.setProperty('--color-text', "#8D99AE");
+        theme = 1;
+    } else {
+        root.style.setProperty('--color-background', "#edf2f4");
+        root.style.setProperty('--color-accent', "#ef233c");
+        root.style.setProperty('--color-important', "#d90429");
+        root.style.setProperty('--color-title', "#2b2d42");
+        root.style.setProperty('--color-text', "#8D99AE");
+        theme = 0;
+    }
+}
 
 function hideAllDiv() {
     var a = document.getElementById("contact-container");
