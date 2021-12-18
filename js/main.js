@@ -11,7 +11,9 @@ node.addEventListener("keydown", ({ key }) => {
         } else if (document.getElementById('cmd').value === 'about') {
             print("hi, i'm mystere1337, a french computer science student, interested in reverse-engineering, hacking, and windows internals. this is my portfolio.", false)
         } else if (document.getElementById('cmd').value === 'projects') {
-            print("stealth: a stealthy game hacking solution.\nmystere1337.github.io: this portfolio\nvaulth: an app using NFTs to virtually authenticate physical objects");
+            print("stealth: (private) a stealthy game hacking solution. (only for educational purposes)\nmystere1337.github.io: this portfolio.\nvaulth: an app using NFTs to virtually authenticate physical objects.\n");
+        } else if (document.getElementById('cmd').value === 'social') {
+            print("discord: mystère#2936\ngithub: @mystere1337\nsteam: id/mystere1337\n")
         } else if (document.getElementById('cmd').value === 'clear') {
             clear();
         } else {
