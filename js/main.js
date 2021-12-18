@@ -7,17 +7,17 @@ node.addEventListener("keydown", ({ key }) => {
         if (document.getElementById('cmd').value === '') {
             return;
         } else if (document.getElementById('cmd').value === 'help') {
-            print("help: see all available commands\nabout: information about me\nprojects: projects i'm working on\nclear: clears the console\nsocial: prints my social links", false)
+            print("<b>help</b>: see all available commands\n<b>about</b>: information about me\n<b>projects</b>: projects i'm working on\n<b>clear</b>: clears the console\n<b>social</b>: prints my social links", false)
         } else if (document.getElementById('cmd').value === 'about') {
-            print("hi, i'm mystere1337, a french computer science student, interested in reverse-engineering, hacking, and windows internals. this is my portfolio.", false)
+            print("hi, i'm <b>mystere1337</b>, a french computer science student, interested in reverse-engineering, hacking, and windows internals. this is my portfolio. i'm currently working on a few notable projects, type <b>projects</b> to learn more about them.", false)
         } else if (document.getElementById('cmd').value === 'projects') {
-            print("stealth: (private) a stealthy game hacking solution. (only for educational purposes)\nmystere1337.github.io: this portfolio.\nvaulth: an app using NFTs to virtually authenticate physical objects.\n");
+            print("<b>stealth</b>: (private) a stealthy game hacking solution. (only for educational purposes)\n<b>mystere1337.github.io</b>: this portfolio.\n<b>vaulth</b>: an app using NFTs to virtually authenticate physical objects.\n");
         } else if (document.getElementById('cmd').value === 'social') {
-            print("discord: mystère#2936\ngithub: @mystere1337\nsteam: id/mystere1337\n")
+            print("<b>discord</b>: mystere#2936\n<b>github</b>: @mystere1337\n<b>steam</b>: id/mystere1337\n")
         } else if (document.getElementById('cmd').value === 'clear') {
             clear();
         } else {
-            print("unknown command. try <b>help</b>", true)
+            print("unknown command. try <b>help</b> to list all available commands.", true)
         }
 
         // reset input value to clear command from field
