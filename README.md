@@ -1,3 +1,3 @@
-### hyperwav.github.io
+### mystere1337.github.io
 
-This is the source code for my portfolio, hosted with github pages at https://mystere.dev/
+A terminal console styled portfolio, made from scratch in a day. Hosted with github pages at https://mystere.dev/
