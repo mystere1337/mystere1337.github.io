@@ -10,6 +10,8 @@ node.addEventListener("keydown", ({ key }) => {
             printHelp();
         } else if (document.getElementById('cmd').value === 'about') {
             printAbout();
+        } else if (document.getElementById('cmd').value === 'clear') {
+            clear();
         } else {
             printUnknown();
         }
@@ -22,7 +24,7 @@ node.addEventListener("keydown", ({ key }) => {
 function print(text, error) {
     var newDiv = document.createElement("div");
     var newParagraph = document.createElement("p");
-    error ? newParagraph.classList.add("console-printerror") : newParagraph.classList.add("console-print");
+    error ? newParagraph.classList.add("console-print", "error") : newParagraph.classList.add("console-print");
     newParagraph.innerHTML = text;
     newDiv.appendChild(newParagraph);
     var currentDiv = document.getElementById('command-line');
@@ -40,4 +42,8 @@ function printHelp() {
 
 function printAbout() {
     print("hi, i'm mystere1337, a french computer science student, interested in reverse-engineering, hacking, and windows internals. this is my portfolio.", false)
+}
+
+function clear() {
+    document.querySelectorAll('.console-print').forEach(e => e.remove());
 }
