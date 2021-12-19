@@ -34,9 +34,6 @@ b {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     border: 1px solid #e5e5ff;
-    box-shadow: 4px 4px 0px 0px #e5e5ff;
-    -webkit-box-shadow: 4px 4px 0px 0px #e5e5ff;
-    -moz-box-shadow: 4px 4px 0px 0px #e5e5ff;
 }
 
 .window-header {
