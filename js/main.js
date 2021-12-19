@@ -17,11 +17,12 @@ node.addEventListener("keydown", ({ key }) => {
         } else if (document.getElementById('cmd').value === 'clear') {
             clear();
         } else {
-            print("unknown command. try <b>help</b> to list all available commands.", true)
+            print("unknown command. type <b>help</b> to list all available commands.", true)
         }
 
         // reset input value to clear command from field
         document.getElementById('cmd').value = '';
+        document.getElementById("cmd").focus();
     }
 })
 
