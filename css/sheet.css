@@ -1,3 +1,9 @@
+:root {
+    --main: #00ff00;
+    --background: #000000;
+    --error: #ff0000;
+}
+
 @font-face {
     font-family: "Pixel Operator Mono";
     src: url("../resources/font/PixelOperatorMono.ttf") format("truetype");
@@ -14,8 +20,8 @@
 }
 
 body {
-    background-color: black;
-    color: #00ff00;
+    background-color: var(--background);
+    color: var(--main);
     font-size: 14px;
     width: 100%;
     height: 100%;
@@ -33,17 +39,17 @@ b {
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    border: 1px solid #00ff00;
+    border: 1px solid var(--main);
 }
 
 .window-header {
     height: 28px;
-    background-color: #222222;
-    border-bottom: 1px solid #00ff00;
+    background-color: var(--background);
+    border-bottom: 1px solid var(--main);
 }
 
 .window-body {
-    background-color: #222222;
+    background-color: var(--background);
     overflow: scroll;
     padding-top: 5px;
     width: 100%;
@@ -70,7 +76,7 @@ b {
 }
 
 .console-print.error {
-    color: #ff0000;
+    color: var(--error);
 }
 
 .console-prompt {
@@ -87,10 +93,10 @@ b {
 }
 
 input {
-    background-color: #222222;
+    background-color: var(--background);
     outline: none;
     border: none;
-    color: #00ff00;
+    color: var(--main);
     width: 100%;
     height: 100%;
 }
