@@ -19,15 +19,15 @@
             <div class="links-container">
                 <SvgLink
                     icon={"github"}
-                    link={"https://github.com/mystere1337/"}
+                    href={"https://github.com/mystere1337/"}
                 />
                 <SvgLink
                     icon={"twitter"}
-                    link={"https://twitter.com/mystere1337/"}
+                    href={"https://twitter.com/mystere1337/"}
                 />
                 <SvgLink
                     icon={"linkedin"}
-                    link={"https://www.linkedin.com/in/aymeric-baud/"}
+                    href={"https://www.linkedin.com/in/aymeric-baud/"}
                 />
             </div>
         </div>
@@ -53,7 +53,7 @@
     }
     .image-container {
         background-color: blue;
-        border-radius: 500px;
+        /* border-radius: 500px; */
         min-width: 256px;
         min-height: 256px;
         max-width: 256px;

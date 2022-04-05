@@ -1,13 +1,13 @@
 <script>
     export let icon;
-    export let link;
+    export let href;
 
     function redirect(url) {
         window.open(url, "_blank").focus();
     }
 </script>
 
-<div class="icon-link" on:click={redirect(link)}>
+<div class="icon-link" on:click={redirect(href)}>
     {#if icon === "linkedin"}
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -67,8 +67,7 @@
 
 <style>
     .icon-link {
-        background-color: #242424;
-        min-width: 40px;
+        background-color: #fff;
         min-height: 40px;
         display: flex;
         align-items: center;
@@ -77,10 +76,12 @@
         transition-duration: 0.2s;
     }
     .icon-link > svg {
-        fill: #ffffff;
-        color: #ffffff;
+        transition-duration: 0.2s;
+        fill: #242424;
+        color: #242424;
     }
-    .icon-link:hover {
-        background-color: #0f0;
+    .icon-link:hover > svg {
+        fill: #aaaaaa;
+        color: #aaaaaa;
     }
 </style>
