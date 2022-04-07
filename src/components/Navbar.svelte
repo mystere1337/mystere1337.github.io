@@ -1,16 +1,16 @@
 <script>
-    export let title;
 </script>
 
-<div class="project-list">
-    <h1 class="title">{title}</h1>
+<div class="section">
     <slot />
 </div>
 
 <style>
-    .project-list {
+    .section {
         width: 100%;
         padding-bottom: 50px;
+        display: flex;
+        gap: 20px;
     }
 
     .title {

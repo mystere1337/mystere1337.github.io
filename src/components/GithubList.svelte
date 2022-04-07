@@ -1,6 +1,6 @@
 <script>
     import ProjectTile from "./ProjectTile.svelte";
-    export let title;
+
     export let user;
 
     const fetchRepos = (async (user) => {
@@ -12,7 +12,7 @@
 </script>
 
 <div class="project-list">
-    <h1 class="title">{title}</h1>
+    <h1 class="title">Repositories for <a href={"https://github.com/" + user}>{user}</a></h1>
     {#await fetchRepos}
         <p>...waiting</p>
     {:then data}
@@ -24,6 +24,7 @@
                     description="No description provided."
                     href={repo.html_url}
                     language={repo.language}
+                    creationdate={repo.created_at.slice(0, 4)}
                 />
                 {:else}
                 <ProjectTile
@@ -31,6 +32,7 @@
                     description={repo.description}
                     href={repo.html_url}
                     language={repo.language}
+                    creationdate={repo.created_at.slice(0, 4)}
                 />
                 {/if}
             {/if}
@@ -50,5 +52,6 @@
         font-size: 32px;
         font-weight: bold;
         padding-bottom: 20px;
+        margin: 0;
     }
 </style>

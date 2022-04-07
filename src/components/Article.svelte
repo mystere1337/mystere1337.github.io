@@ -12,10 +12,9 @@
             <img src={image} alt="" />
         </div>
         <div class="article">
-            <h1>{title}</h1>
-            <br />
-            <span class="subtitle">{description}</span>
-            <br />
+            <div>
+                <h1>{title}</h1>
+            </div>
             <div class="links-container">
                 <SvgLink
                     icon={"github"}
@@ -29,6 +28,13 @@
                     icon={"linkedin"}
                     href={"https://www.linkedin.com/in/aymeric-baud/"}
                 />
+                <SvgLink
+                    icon={"soundcloud"}
+                    href={"https://soundcloud.com/hyperwavmusic"}
+                />
+            </div>
+            <div>
+                <span class="subtitle">{description}</span>
             </div>
         </div>
     </div>
@@ -36,9 +42,10 @@
 
 <style>
     .container {
-        padding: 60px 0 60px 0;
+        padding: 0px 0 50px 0;
     }
     .flex-container {
+        flex-basis: auto;
         display: flex;
         gap: 50px;
     }
@@ -52,8 +59,8 @@
         min-height: 100%;
     }
     .image-container {
-        background-color: blue;
-        /* border-radius: 500px; */
+        background-color: var(--text);
+        border-radius: 500px;
         min-width: 256px;
         min-height: 256px;
         max-width: 256px;
@@ -68,6 +75,9 @@
         max-width: 590px;
         display: flex;
         flex-direction: column;
+    }
+    .article >* {
+        flex: 1;
     }
     h1 {
         font-size: 64px;
