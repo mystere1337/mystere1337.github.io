@@ -1,0 +1,1 @@
+import{S as n,i as o,s as r}from"../chunks/index-2264c688.js";function a({params:t}){return{status:404,error:new Error(`Page not found: /${t.path}`)}}class u extends n{constructor(e){super(),o(this,e,null,null,r,{})}}export{u as default,a as load};
